@@ -132,7 +132,7 @@ First, create a file called `home-client.yaml` with the following content:
 ```yaml
 proxies:
   # "Go Home" proxy node
-  - name: "🏠 Return Home"
+  - name: home-ss-proxy
     type: ss
     server: your-ddns-domain.com # !!! CHANGE THIS to your domain from Step 2 !!!
     port: 23456 # Must match the server side
@@ -142,17 +142,17 @@ proxies:
 
 proxy-groups:
   # "Go Home" dedicated group
-  - name: "Home Network"
+  - name: home-proxy-group
     type: select
     proxies:
-      - "🏠 Return Home"
-      - "DIRECT" # Add a direct connection option, just in case
+      - home-ss-proxy
+      - DIRECT # Add a direct connection option, just in case
 
 rules:
   # CRITICAL RULE: Route all traffic for your home network range to the "Home Network" group
-  - IP-CIDR,192.168.1.0/24,Home Network # !!! NOTE: Change this if your network isn't 192.168.1.x !!!
+  - IP-CIDR,192.168.1.0/24,home-proxy-group # !!! NOTE: Change this if your network isn't 192.168.1.x !!!
   # You can also add other home network rules
-  # - DOMAIN-SUFFIX,internal.domain,Home Network
+  # - DOMAIN-SUFFIX,internal.domain,home-proxy-group
 ```
 
 Next, use the yq tool to merge this with your `crush.yaml`:
