@@ -1,5 +1,7 @@
 # Make Hajimi Great Again: Unifying Your Study Abroad and Home Networks
 
+[中文版](./README.zh.md)
+
 Are you an international student who has returned home, only to find yourself constantly switching between VPN apps? 
 
 You're not alone. The struggle of trying to connect to your university’s resources with one app and then managing your home NAS with another is a major pain point.
