@@ -138,7 +138,7 @@ rules:
 proxies:
   # "Go Home" proxy node
   # “回老家”代理节点
-  - name: "🏠 Return Home"
+  - name: "home-ss-proxy"
     type: ss
     server: your-ddns-domain.com # !!! CHANGE THIS to your domain from Step 2 !!!
     # !!! 务必将其更改为你在第2步中设置的域名 !!!
@@ -153,21 +153,21 @@ proxies:
 proxy-groups:
   # "Go Home" dedicated group
   # “回老家”专用组
-  - name: "Home Network"
+  - name: "home-proxy-group"
     type: select
     proxies:
-      - "🏠 Return Home"
+      - "home-ss-proxy"
       - "DIRECT" # Add a direct connection option, just in case
       # 添加一个直连选项，以防万一
 
 rules:
   # CRITICAL RULE: Route all traffic for your home network range to the "Home Network" group
   # 关键规则：将所有针对家庭网络范围的流量路由到“Home Network”组
-  - IP-CIDR,192.168.1.0/24,Home Network # !!! NOTE: Change this if your network isn't 192.168.1.x !!!
+  - IP-CIDR,192.168.1.0/24,home-proxy-group # !!! NOTE: Change this if your network isn't 192.168.1.x !!!
   # !!! 注意：如果你的网络不是 192.168.1.x，请修改此项 !!!
   # You can also add other home network rules
   # 你也可以添加其他家庭网络规则
-  # - DOMAIN-SUFFIX,internal.domain,Home Network
+  # - DOMAIN-SUFFIX,internal.domain,home-proxy-group
 ```
 
 接下来，使用yq工具将其与你的crush.yaml合并：
