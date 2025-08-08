@@ -21,3 +21,10 @@ rules:
   - IP-CIDR,192.168.1.0/24,home-proxy-group # !!! NOTE: Change this if your network isn't 192.168.1.x !!!
   # You can also add other home network rules
   # - DOMAIN-SUFFIX,internal.domain,home-proxy-group
+
+# uncomment all the following configs if you want to use ip4p domain names
+# ipv6: true
+# dns:
+#  ipv6: true
+# experimental:
+#  dialer-ip4p-convert: true
