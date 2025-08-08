@@ -20,7 +20,7 @@ log-level: info
 external-controller: '127.0.0.1:9090'
 # Address and port for external dashboard control.
 
-secret: 'your-client-hajimi-secrets-random'
+secret: 'your-hajimi-client-secrets-random'
 # Password for external dashboard access.
 
 ---
@@ -76,3 +76,4 @@ rules:
   - DOMAIN-SUFFIX,youtube.com,Auto Select
   - GEOIP,CN,DIRECT
   - MATCH,Manual Select
+
