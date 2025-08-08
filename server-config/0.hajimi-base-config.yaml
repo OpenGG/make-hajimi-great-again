@@ -20,7 +20,7 @@ log-level: info
 external-controller: '127.0.0.1:9090'
 # Address and port for external dashboard control.
 
-secret: 'your-hajimi-secrets-random'
+secret: 'your-home-network-hajimi-secrets-random'
 # Password for external dashboard access.
 
 ---
@@ -30,17 +30,17 @@ proxies:
 
   - name: "Node 1"
     type: ss
-    server: "your_server_ip_1"
+    server: "your-upstream-server-ip-1"
     port: 443
     cipher: "aes-256-gcm"
-    password: "your_password_1"
+    password: "your-upstream-password-1"
     udp: true
 
   - name: "Node 2"
     type: vmess
-    server: "your_server_domain_2"
+    server: "your-upstream-server-domain-2"
     port: 8080
-    uuid: "your_uuid_2"
+    uuid: "your-uuid-2"
     alterId: 0
     cipher: "auto"
     network: ws
