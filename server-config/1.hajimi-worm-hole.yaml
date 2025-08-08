@@ -6,7 +6,7 @@ allow-lan: false
 bind-address: '*'
 unified-delay: true
 external-controller: '0.0.0.0:9090'
-secret: 'your-client-password-random'
+secret: 'your-hajimi-password-random'
 
 proxies:
   - name: "home-ss-proxy"
@@ -15,7 +15,7 @@ proxies:
     server: home-server-ip
     port: 23456
     cipher: aes-256-gcm
-    password: "your-server-password-random"
+    password: "your-hajimi-worm-hole-password-random"
     udp: true
 
 proxy-groups:
