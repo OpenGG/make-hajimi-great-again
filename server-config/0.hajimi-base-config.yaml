@@ -20,7 +20,7 @@ log-level: info
 external-controller: '127.0.0.1:9090'
 # Address and port for external dashboard control.
 
-secret: ''
+secret: 'your-hajimi-secrets-random'
 # Password for external dashboard access.
 
 ---
