@@ -5,7 +5,7 @@ proxies:
     server: your-ddns-domain.com # !!! CHANGE THIS to your domain from Step 2 !!!
     port: 23456 # Must match the server side
     cipher: aes-256-gcm # Must match the server side
-    password: "your-home-network-hajimi-password-random" # !!! CHANGE THIS to match the server password !!!
+    password: "your-wormhole-password-random" # !!! CHANGE THIS to match the server password !!!
     udp: true
 
 proxy-groups:
